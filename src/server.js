@@ -33,6 +33,4 @@ app.use('/files', express.static(path.resolve(__dirname, "..", "tmp")));
 app.use(require('./routes')) // Se não colocar o ./ interpreta que é alguma dependência da node modules.
                              // o ./ tbm informa que é a pasta atual. Está importando o arquivo na pasta atual.
                              
-
-
-app.listen(3333);
+app.listen(process.env.PORT || 3333);
